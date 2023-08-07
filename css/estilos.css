@@ -10,6 +10,7 @@
 #footer{
     background-color: #F4F5EF;
     color: #000000;
+    padding: 20px;
 }
 
 *{
@@ -200,6 +201,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.texto-box{
+    margin: 10px;
 }
 
 h5{
