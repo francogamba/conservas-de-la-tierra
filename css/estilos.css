@@ -41,14 +41,10 @@
 }
 
 .container--basico{
-    /*box-modeling*/
-    width: fit-content;
-    max-width: fit-content;
-
     /*grid*/
     display: grid;
     grid-template-columns: 0.5fr 3fr 0.5fr;
-    grid-template-rows: 0.25fr 3fr 0.25fr;
+    grid-template-rows: 0.15fr 3fr 0.25fr;
     row-gap: 10px;
     grid-template-areas:
     "nav     nav     nav"
@@ -103,6 +99,7 @@
     /*box modeling*/
     margin-right: 50px;
     margin-bottom: 200px;
+    width: 500px;
 
     /*flex*/
     display: flex;
@@ -114,7 +111,7 @@
     /*flex*/
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .estilo-links{
