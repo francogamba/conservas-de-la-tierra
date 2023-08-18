@@ -2,8 +2,8 @@
 $color-primario: #FFFFFF;
 $color-secundario: #F4F5EF;
 $color-texto: #000000;
-$font-principal: url("../assets/fuentes/Poppins-Regular.ttf");
-$font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf");
+$font-principal: url("../assets/fuentes/Poppins-Regular.ttf"), sans-serif;
+$font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans-serif;
 
 
 /*Selector de tipo ID*/
@@ -12,7 +12,7 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf");
     background-color: $color-secundario;
     color: $color-texto;
     /*tipografia*/
-    font-family: $font-secundaria, sans-serif;
+    font-family: $font-secundaria;
 }
 
 #footer{
@@ -47,9 +47,10 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf");
 /*body*/
 .nav{
     /*tipografia*/
-    font-family: $font-secundaria, sans-serif;
+    font-family: $font-secundaria;
 }
 
+/*nesting*/
 .container--basico{
     /*grid*/
     display: grid;
@@ -61,33 +62,37 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf");
     "main    main    main"
     "footer  footer  footer"
     ;
+
+    .nav-grid{
+        grid-area: nav;
+    }
+
+    .main-grid{
+        /*box modeling*/
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /*flex*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        /*grid areas*/
+        grid-column: 2/3;
+    }
+
+    .footer-grid{
+        /*flex*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        /*grid areas*/
+        grid-area: footer;
+    }
 }
 
-.nav-grid{
-    grid-area: nav;
-}
-
-.main-grid{
-    /*flex*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    /*grid areas*/
-    grid-column: 2/3;
-}
-
-.footer-grid{
-    /*flex*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    /*grid areas*/
-    grid-area: footer;
-}
 
 .container--basico > div{
     /*box-modeling*/
@@ -103,6 +108,11 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf");
     align-items: center;
     /*tipografia*/
     text-align: center;
+}
+
+.bloque{
+    /*box modeling*/
+    margin-bottom: 70px;
 }
 
 .contacto-bloque{
@@ -155,6 +165,7 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf");
     margin-right: 10px;
 }
 
+/*nested*/
 .main-padre{
     /*box modeling*/
     width: auto;
@@ -165,21 +176,21 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf");
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
 
-.main-hijo{
-    /*box modeling*/
-    width: auto;
-    margin: 10px;
-    padding: 10px;
-    /*flexbox*/
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    /*tipografia*/
-    font-family: $font-principal, sans-serif;
-    font-size: 18px;
+    .main-hijo{
+        /*box modeling*/
+        width: auto;
+        margin: 10px;
+        padding: 10px;
+        /*flexbox*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /*tipografia*/
+        font-family: $font-principal;
+        font-size: 18px;
+    }
 }
 
 .bloque-padre{
@@ -192,19 +203,19 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf");
     flex-direction: row;
     justify-content: space-evenly;
     align-items: first baseline;
-}
 
-.bloque-hijo{
-    /*box modeling*/
-    padding: 10px;
-    margin: 10px;
-    /*flexbox*/
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    /*tipografia*/
-    text-align: center;
+    .bloque-hijo{
+        /*box modeling*/
+        padding: 10px;
+        margin: 10px;
+        /*flexbox*/
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        /*tipografia*/
+        text-align: center;
+    }
 }
 
 .video{
@@ -223,15 +234,16 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf");
     margin: 10px;
 }
 
+
 h5{
     /*tipografia*/
-    font-family: $font-secundaria, sans-serif;
+    font-family: $font-secundaria;
     font-size: 18px;
 }
 
-p{
+p {
     /*tipografia*/
-    font-family: $font-principal, sans-serif;
+    font-family: $font-principal;
     font-size: 14px;
 }
 
@@ -241,13 +253,13 @@ p{
     
     h5{
         /*tipografia*/
-        font-family: $font-secundaria, sans-serif;
+        font-family: $font-secundaria;
         font-size: 20px;
     }
     
     p{
         /*tipografia*/
-        font-family: $font-principal, sans-serif;
+        font-family: $font-principal;
         font-size: 16px;
     }
 

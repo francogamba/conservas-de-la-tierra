@@ -40,6 +40,7 @@
   font-family: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans-serif;
 }
 
+/*nesting*/
 .container--basico {
   /*grid*/
   display: grid;
@@ -48,12 +49,13 @@
   row-gap: 10px;
   grid-template-areas: "nav     nav     nav" "main    main    main" "footer  footer  footer";
 }
-
-.nav-grid {
+.container--basico .nav-grid {
   grid-area: nav;
 }
-
-.main-grid {
+.container--basico .main-grid {
+  /*box modeling*/
+  margin-top: 20px;
+  margin-bottom: 20px;
   /*flex*/
   display: flex;
   flex-direction: column;
@@ -62,8 +64,7 @@
   /*grid areas*/
   grid-column: 2/3;
 }
-
-.footer-grid {
+.container--basico .footer-grid {
   /*flex*/
   display: flex;
   flex-direction: column;
@@ -87,6 +88,11 @@
   align-items: center;
   /*tipografia*/
   text-align: center;
+}
+
+.bloque {
+  /*box modeling*/
+  margin-bottom: 70px;
 }
 
 .contacto-bloque {
@@ -137,6 +143,7 @@
   margin-right: 10px;
 }
 
+/*nested*/
 .main-padre {
   /*box modeling*/
   width: auto;
@@ -148,8 +155,7 @@
   justify-content: center;
   align-items: center;
 }
-
-.main-hijo {
+.main-padre .main-hijo {
   /*box modeling*/
   width: auto;
   margin: 10px;
@@ -175,8 +181,7 @@
   justify-content: space-evenly;
   align-items: first baseline;
 }
-
-.bloque-hijo {
+.bloque-padre .bloque-hijo {
   /*box modeling*/
   padding: 10px;
   margin: 10px;
