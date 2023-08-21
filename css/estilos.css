@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*variables*/
+/*mixins*/
 /*Selector de tipo ID*/
 #barra-navegacion {
   /*Propiedad*/
@@ -40,6 +41,22 @@
   font-family: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans-serif;
 }
 
+/*animaciones*/
+/*aparece solo una vez en inicio*/
+.nav-image {
+  animation: nav-image-animation 1s ease 0s 1 normal forwards;
+}
+
+@keyframes nav-image-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /*nesting*/
 .container--basico {
   /*grid*/
@@ -192,6 +209,11 @@
   align-items: center;
   /*tipografia*/
   text-align: center;
+  /*include*/
+  background-color: #F4F5EF;
+  border-radius: 20px;
+  height: auto;
+  padding: 20px;
 }
 
 .video {

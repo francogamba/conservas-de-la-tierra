@@ -6,6 +6,15 @@ $font-principal: url("../assets/fuentes/Poppins-Regular.ttf"), sans-serif;
 $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans-serif;
 
 
+/*mixins*/
+@mixin bordeProductos($background, $borderRadius, $backgroundHeight, $padding){
+    background-color: $background;
+    border-radius: $borderRadius;
+    height: $backgroundHeight;
+    padding: $padding;
+}
+
+
 /*Selector de tipo ID*/
 #barra-navegacion{
     /*Propiedad*/
@@ -48,6 +57,24 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans
 .nav{
     /*tipografia*/
     font-family: $font-secundaria;
+}
+
+/*animaciones*/
+/*aparece solo una vez en inicio*/
+.nav-image{
+    animation: nav-image-animation 1s ease 0s 1 normal forwards;
+}
+
+@keyframes nav-image-animation {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 /*nesting*/
@@ -215,6 +242,8 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans
         align-items: center;
         /*tipografia*/
         text-align: center;
+        /*include*/
+        @include bordeProductos(#F4F5EF,20px,auto,20px);
     }
 }
 
