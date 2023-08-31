@@ -169,6 +169,12 @@
   margin: 10px;
 }
 
+.bloque-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /*nested*/
 .main-padre {
   /*box modeling*/
@@ -196,7 +202,7 @@
   font-size: 18px;
 }
 
-.bloque-padre {
+.bloque-cards {
   /*box-modeling*/
   margin-top: 10px;
   margin-bottom: 10px;
@@ -205,15 +211,14 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: first baseline;
+  align-items: stretch;
 }
-.bloque-padre .card {
+.bloque-cards .card {
   /*box modeling*/
-  max-width: 300px;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   /*flexbox*/
@@ -226,9 +231,8 @@
   /*include*/
   background-color: #F4F5EF;
   height: auto;
-  padding: 20px;
 }
-.bloque-padre .card .card-container {
+.bloque-cards .card .card-container {
   padding: 2px 16px;
 }
 
@@ -255,18 +259,18 @@
 h5 {
   font-family: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans-serif;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 h6 {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 p {
   /*tipografia*/
   font-family: url("../assets/fuentes/Poppins-Regular.ttf"), sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /*media queries*/
@@ -275,18 +279,18 @@ p {
     /*tipografia*/
     font-family: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans-serif;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 24px;
   }
   h6 {
     font-weight: normal;
-    font-size: 18px;
+    font-size: 20px;
   }
   p {
     /*tipografia*/
     font-family: url("../assets/fuentes/Poppins-Regular.ttf"), sans-serif;
-    font-size: 18px;
+    font-size: 20px;
   }
-  .bloque-padre {
+  .bloque-cards {
     /*box-modeling*/
     margin-top: 10px;
     margin-bottom: 10px;

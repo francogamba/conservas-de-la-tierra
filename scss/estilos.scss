@@ -7,10 +7,9 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans
 
 
 /*mixins*/
-@mixin bordeProductos($background, $backgroundHeight, $padding){
+@mixin bordeProductos($background, $backgroundHeight){
     background-color: $background;
     height: $backgroundHeight;
-    padding: $padding;
 }
 
 
@@ -200,6 +199,12 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans
     margin: 10px;
 }
 
+.bloque-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 /*nested*/
 .main-padre{
     /*box modeling*/
@@ -228,7 +233,7 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans
     }
 }
 
-.bloque-padre{
+.bloque-cards{
     /*box-modeling*/
     margin-top: 10px;
     margin-bottom: 10px;
@@ -237,15 +242,14 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: first baseline;
+    align-items: stretch;
 
     .card{
         /*box modeling*/
-        max-width: 300px;
         margin-top: 20px;
         margin-bottom: 20px;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         transition: 0.3s;
         /*flexbox*/
@@ -256,7 +260,7 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans
         /*tipografia*/
         text-align: center;
         /*include*/
-        @include bordeProductos(#F4F5EF,auto,20px);
+        @include bordeProductos(#F4F5EF,auto);
 
         .card-container {
             padding: 2px 16px;
@@ -289,18 +293,18 @@ $font-secundaria: url("../assets/fuentes/GlacialIndifference-Regular.otf"), sans
 h5{
     font-family: $font-secundaria;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 h6{
     font-weight: normal;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 p {
     /*tipografia*/
     font-family: $font-principal;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 
@@ -311,21 +315,21 @@ p {
         /*tipografia*/
         font-family: $font-secundaria;
         font-weight: normal;
-        font-size: 22px;
+        font-size: 24px;
     }
 
     h6{
         font-weight: normal;
-        font-size: 18px;
+        font-size: 20px;
     }
     
     p{
         /*tipografia*/
         font-family: $font-principal;
-        font-size: 18px;
+        font-size: 20px;
     }
 
-    .bloque-padre{
+    .bloque-cards{
         /*box-modeling*/
         margin-top: 10px;
         margin-bottom: 10px;
